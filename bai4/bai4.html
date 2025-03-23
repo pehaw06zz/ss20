@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let str = document.getElementById("stringInput").value;
+            let searchChar = document.getElementById("searchInput").value;
+
+            if (searchChar.length === 0) {
+                document.getElementById("result").innerText = "Vui lòng nhập một ký tự để tìm";
+                return;
+            }
+
+            if (str.includes(searchChar)) {
+                document.getElementById("result").innerText = "Tồn tại từ cần tìm kiếm";
+            } else {
+                document.getElementById("result").innerText = "Không tồn tại từ cần tìm kiếm";
+            }
+    </script>
+</body>
+</html>

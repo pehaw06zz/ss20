@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let input = document.getElementById("numberInput").value;
+            
+            if (isNaN(input) || input.includes(".")) {
+                document.getElementById("result").innerText = "Số không hợp lệ";
+                return;
+            }
+            let numStr = input.toString();
+            let reversedStr = numStr.split('').reverse().join('');
+            if (numStr === reversedStr) {
+                document.getElementById("result").innerText = "Là số đối xứng";
+            } else {
+                document.getElementById("result").innerText = "Không phải số đối xứng";
+            }
+    </script>
+</body>
+</html>
